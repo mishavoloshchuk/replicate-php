@@ -2,10 +2,13 @@
 
 namespace Sawirricardo\Replicate\Requests;
 
+use Saloon\Enums\Method;
 use Saloon\Http\Request;
 
 class CancelPredictionRequest extends Request
 {
+    public Method $method = Method::GET;
+    
     public function __construct(
         protected string $id
     ) {
